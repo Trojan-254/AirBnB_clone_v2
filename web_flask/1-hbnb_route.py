@@ -1,16 +1,18 @@
 #!/usr/bin/python3
+"""
+starts a web application and displays HBNB
+"""
 
 from flask import Flask
-
 app = Flask(__name__)
-app.config['STRICT_SLASHES'] = False
 
-@app.route('/')
+
+@app.route('/', strict_slashes=False)
 def helloHBNB():
     """displays Hello HBNB!"""
     return "Hello HBNB!"
 
-@app.route('/hbnb')
+@app.route('/hbnb', strict_slashes=False)
 def hello():
    """displays hbnb"""
    return "HBNB"
