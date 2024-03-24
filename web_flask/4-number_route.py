@@ -28,10 +28,12 @@ def python_is_cool(text='is_cool'):
     """ Prints a Message when /python is called """
     return "Python " + text.replace('_', ' ')
 
+
 @app.route('/number/<int:n>', strict_slashes=False)
 def number(n):
     """returns n if it is an int"""
     return "{:d} is a number".format(n)
+
 
 if __name__ == "__main__":
     """ Main Function """
