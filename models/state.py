@@ -18,8 +18,8 @@ class State(BaseModel, Base):
     cities = relationship("City",
                           backref="state",
                           cascade="all, delete, delete-orphan")
-    else:
-        name = ""
+    # else:
+    #     name = ""
 
     def __init__(self, *args, **kwargs):
         """initializes state"""
