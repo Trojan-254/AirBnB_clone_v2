@@ -1,8 +1,6 @@
 #!/usr/bin/python3
-#!/usr/bin/python3
 """ holds class State"""
 import models
-from models import storage_t
 from models.base_model import BaseModel, Base
 from models.city import City
 from os import getenv
@@ -34,5 +32,5 @@ class State(BaseModel, Base):
             all_cities = models.storage.all(City)
             for city in all_cities.values():
                 if city.state_id == self.id:
-                     city_list.append(city)
+                    city_list.append(city)
             return city_list
